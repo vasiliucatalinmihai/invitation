@@ -55,9 +55,18 @@
 
     <div class="s-intro__slider swiper-container">
         <div class="swiper-wrapper">
-            <div class="s-intro__slide swiper-slide" style="background-image: url('/assets/img/hero-1.jpg');"></div>
-            <div class="bg-opacity-50 s-intro__slide swiper-slide" style="background-image: url('/assets/img//hero-2.jpg');"></div>
-            <div class="s-intro__slide swiper-slide bg-opacity-10" style="background-image: url('/assets/img//hero-3.jpg');"></div>
+            <div class="bg-opacity-50 s-intro__slide swiper-slide"
+                 style="background-image: url('/assets/img//1.jpeg');"></div>
+            <div class="bg-opacity-50 s-intro__slide swiper-slide"
+                 style="background-image: url('/assets/img//2.jpeg');"></div>
+            <div class="bg-opacity-50 s-intro__slide swiper-slide"
+                 style="background-image: url('/assets/img//3.jpeg');"></div>
+            <div class="bg-opacity-50 s-intro__slide swiper-slide"
+                 style="background-image: url('/assets/img//4.jpeg');"></div>
+            <div class="bg-opacity-50 s-intro__slide swiper-slide"
+                 style="background-image: url('/assets/img//5.jpeg');"></div>
+            <div class="bg-opacity-50 s-intro__slide swiper-slide bg-opacity-10"
+                 style="background-image: url('/assets/img//6.jpeg');"></div>
         </div>
     </div>
 

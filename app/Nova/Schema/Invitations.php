@@ -5,6 +5,7 @@ namespace App\Nova\Schema;
 use App\Nova\Actions\Community\AddSmartContractAction;
 use App\Nova\Actions\Community\CreateAction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\URL;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
@@ -28,13 +29,14 @@ class Invitations extends Resource
 
     public function fields(Request $request)
     {
+        URL::route('invitation.view', ['hash' => $this->hash]);
         $domain = "http://vasilii-wday.home.ro";
         return [
             ID::make()->sortable()->readonly(),
             Text::make('email')->nullable(true),
             Text::make('fullname'),
             Text::make('hash')->readonly()->showOnIndex(false),
-            Text::make('link')->displayUsing(fn() => "<a href='$domain/inv/$this->hash' target='_blank'>$domain/inv/$this->hash</a>")
+            Text::make('link')->displayUsing(fn() => "<a href='" . URL::route('invitation.view', ['hash' => $this->hash]) . "' target='_blank'>" . URL::route('invitation.view', ['hash' => $this->hash]) . "</a>")
                 ->asHtml()->readonly()->hideWhenCreating()->hideWhenUpdating()->hideFromIndex(true),
 
 
