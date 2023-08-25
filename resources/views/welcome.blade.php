@@ -60,8 +60,6 @@
             <div class="bg-opacity-50 s-intro__slide swiper-slide"
                  style="background-image: url('/assets/img//2.jpeg');"></div>
             <div class="bg-opacity-50 s-intro__slide swiper-slide"
-                 style="background-image: url('/assets/img//3.jpeg');"></div>
-            <div class="bg-opacity-50 s-intro__slide swiper-slide"
                  style="background-image: url('/assets/img//4.jpeg');"></div>
             <div class="bg-opacity-50 s-intro__slide swiper-slide"
                  style="background-image: url('/assets/img//5.jpeg');"></div>

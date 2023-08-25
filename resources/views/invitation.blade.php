@@ -60,11 +60,9 @@
         <div class="swiper-wrapper">
 
             <div class="bg-opacity-50 s-intro__slide swiper-slide"
-                 style="background-image: url('/assets/img//1.jpeg');"></div>
-            <div class="bg-opacity-50 s-intro__slide swiper-slide"
                  style="background-image: url('/assets/img//2.jpeg');"></div>
             <div class="bg-opacity-50 s-intro__slide swiper-slide"
-                 style="background-image: url('/assets/img//3.jpeg');"></div>
+                 style="background-image: url('/assets/img//1.jpeg');"></div>
             <div class="bg-opacity-50 s-intro__slide swiper-slide"
                  style="background-image: url('/assets/img//4.jpeg');"></div>
             <div class="bg-opacity-50 s-intro__slide swiper-slide"
@@ -234,7 +232,10 @@
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
+                            </div>
 
+
+                            <div class="row">
                                 <div class="col-sm-6 col-md-4">
                                     <label style="margin-bottom: 0px" for="guests">Persoane:</label>
                                     <select id="guests" name="guests" class="@error('guests') is-invalid @enderror">
