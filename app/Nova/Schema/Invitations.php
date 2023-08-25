@@ -29,8 +29,6 @@ class Invitations extends Resource
 
     public function fields(Request $request)
     {
-        URL::route('invitation.view', ['hash' => $this->hash]);
-        $domain = "http://vasilii-wday.home.ro";
         return [
             ID::make()->sortable()->readonly(),
             Text::make('email')->nullable(true),
