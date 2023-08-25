@@ -34,7 +34,7 @@ class Invitations extends Resource
             Text::make('email')->nullable(true),
             Text::make('fullname'),
             Text::make('hash')->readonly()->showOnIndex(false),
-            Text::make('link')->displayUsing(fn() => "<a href='//$domain/inv/$this->hash' target='_blank'>$domain/inv/$this->hash</a>")
+            Text::make('link')->displayUsing(fn() => "<a href='$domain/inv/$this->hash' target='_blank'>$domain/inv/$this->hash</a>")
                 ->asHtml()->readonly()->hideWhenCreating()->hideWhenUpdating()->hideFromIndex(true),
 
 
