@@ -17,7 +17,8 @@
 
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
     <title>Vasilii wday</title>
 
     <!-- mobile specific metas
@@ -28,7 +29,8 @@
     ================================================== -->
     <link rel="stylesheet" href="{{url('assets/undangan/css/vendor.css')}}">
     <link rel="stylesheet" href="{{url('assets/undangan/css/styles.css')}}">
-    <link rel="stylesheet" href="{{url('assets/undangan/css/gallery-grid.css')}}">
+    <link rel="stylesheet"
+          href="{{url('assets/undangan/css/gallery-grid.css')}}">
 
     <!-- favicons
     ================================================== -->
@@ -209,32 +211,53 @@
 
 
                     <div class="column">
-                        <form method="POST" action="/{{$invitation->hash}}">
+                        <form method="POST" action="/inv/{{$invitation->hash}}">
 
                             @csrf
                             <input type="hidden" name="hash"
                                    value="{{$invitation->hash}}">
                             <div class="row">
                                 <div class="col" style="width: 45%">
-                                    <label for="email">Email:</label>
-                                    <input type="email" id="email" name="email"
-                                           style="width: 100%"
-                                           value="{{$invitation->email}}"
-                                           class="@error('email') is-invalid @enderror">
-                                    @error('email')
+                                    <label for="accepted">Vin:</label>
+                                    <select id="accepted" name="accepted"
+                                            style="width: 100%"
+                                            class="@error('accepted') is-invalid @enderror">
+                                        <option
+                                            {{(int) $invitation->accepted == 0 ? 'selected' : ''}} value="0">
+                                            Nu
+                                        </option>
+                                        <option
+                                            {{(int) $invitation->accepted == 1 ? 'selected' : ''}} value="1">
+                                            Da
+                                        </option>
+                                    </select>
+                                    @error('accepted')
                                     <div
                                         class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
+
                                 <div class="col" style="width: 45%">
-                                    <label for="accepted">Vin:</label>
-                                    <select id="accepted" name="accepted"
-                                           style="width: 100%"
-                                           class="@error('accepted') is-invalid @enderror">
-                                        <option {{(int) $invitation->accepted == 0 ? 'selected' : ''}} value="0">Nu</option>
-                                        <option {{(int) $invitation->accepted == 1 ? 'selected' : ''}} value="1">Da</option>
+                                    <label for="guests">Persoane:</label>
+                                    <select id="guests"
+                                            name="guests"
+                                            value="{{$invitation->guests}}"
+                                            style="width: 100%"
+                                            class="@error('guests') is-invalid @enderror">
+                                        <option
+                                            {{(int) $invitation->guests == 1 ? 'selected' : ''}} value="1">
+                                            1
+                                        </option>
+                                        <option
+                                            {{(int) $invitation->guests == 2 ? 'selected' : ''}} value="2">
+                                            2
+                                        </option>
+                                        <option
+                                            {{(int) $invitation->guests == 3 ? 'selected' : ''}} value="3">
+                                            3
+                                        </option>
                                     </select>
-                                    @error('accepted')
+                                    @error('guests')
                                     <div
                                         class="alert alert-danger">{{ $message }}</div>
                                     @enderror
@@ -243,34 +266,29 @@
 
 
                             <div class="row">
-                                <div class="col" style="width: 33%">
-                                    <label for="guests">Persoane:</label>
-                                    <select id="guests"
-                                            name="guests"
-                                            value="{{$invitation->guests}}"
-                                            style="width: 100%"
-                                            class="@error('guests') is-invalid @enderror">
-                                        <option {{(int) $invitation->guests == 1 ? 'selected' : ''}} value="1">1</option>
-                                        <option {{(int) $invitation->guests == 2 ? 'selected' : ''}} value="2">2</option>
-                                        <option {{(int) $invitation->guests == 3 ? 'selected' : ''}} value="3">3</option>
-                                    </select>
-                                    @error('guests')
-                                    <div
-                                        class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-
-                                <div class="col" style="width: 33%">
+                                <div class="col" style="width: 45%">
                                     <label for="infants">Copii:</label>
                                     <select id="infants"
                                             name="infants"
                                             style="width: 100%"
                                             value="{{$invitation->infants}}"
                                             class="@error('infants') is-invalid @enderror">
-                                        <option {{(int) $invitation->infants == 0 ? 'selected' : ''}} value="0">0</option>
-                                        <option {{(int) $invitation->infants == 1 ? 'selected' : ''}} value="1">1</option>
-                                        <option {{(int) $invitation->infants == 2 ? 'selected' : ''}} value="2">2</option>
-                                        <option {{(int) $invitation->infants == 3 ? 'selected' : ''}} value="3">3</option>
+                                        <option
+                                            {{(int) $invitation->infants == 0 ? 'selected' : ''}} value="0">
+                                            0
+                                        </option>
+                                        <option
+                                            {{(int) $invitation->infants == 1 ? 'selected' : ''}} value="1">
+                                            1
+                                        </option>
+                                        <option
+                                            {{(int) $invitation->infants == 2 ? 'selected' : ''}} value="2">
+                                            2
+                                        </option>
+                                        <option
+                                            {{(int) $invitation->infants == 3 ? 'selected' : ''}} value="3">
+                                            3
+                                        </option>
                                     </select>
                                     @error('infants')
                                     <div
@@ -278,17 +296,30 @@
                                     @enderror
                                 </div>
 
-                                <div class="col" style="width: 33%">
-                                    <label for="infants_age">Varsta copii:</label>
+                                <div class="col" style="width: 45%">
+                                    <label for="infants_age">Varsta
+                                        copii:</label>
                                     <select id="infants_age"
                                             name="infants_age"
                                             style="width: 100%"
                                             value="{{$invitation->infants_age}}"
                                             class="@error('infants_age') is-invalid @enderror">
-                                        <option {{(int) $invitation->infants_age == 0 ? 'selected' : ''}} value="0">n/a</option>
-                                        <option {{(int) $invitation->infants_age == 3 ? 'selected' : ''}} value="3">mai mic de 3 ani</option>
-                                        <option {{(int) $invitation->infants_age == 7 ? 'selected' : ''}} value="7">3-7 ani</option>
-                                        <option {{(int) $invitation->infants_age == 18 ? 'selected' : ''}} value="18">mai mare de 7</option>
+                                        <option
+                                            {{(int) $invitation->infants_age == 0 ? 'selected' : ''}} value="0">
+                                            n/a
+                                        </option>
+                                        <option
+                                            {{(int) $invitation->infants_age == 3 ? 'selected' : ''}} value="3">
+                                            mai mic de 3 ani
+                                        </option>
+                                        <option
+                                            {{(int) $invitation->infants_age == 7 ? 'selected' : ''}} value="7">
+                                            3-7 ani
+                                        </option>
+                                        <option
+                                            {{(int) $invitation->infants_age == 18 ? 'selected' : ''}} value="18">
+                                            mai mare de 7
+                                        </option>
                                     </select>
                                     @error('infants_age')
                                     <div
@@ -298,26 +329,35 @@
                             </div>
                             <div class="row">
                                 <div class="col" style="width: 45%">
-                                    <label for="food_restriction">Restrictii mancare, alergii:</label>
+                                    <label for="food_restriction">Restrictii
+                                        mancare, alergii:</label>
                                     <textarea id="food_restriction"
-                                           name="food_restriction"
-                                           style="width: 100%"
-                                           rows="2"
-                                           class="@error('food_restriction') is-invalid @enderror">{{$invitation->food_restriction}}</textarea>
+                                              name="food_restriction"
+                                              style="width: 100%"
+                                              rows="2"
+                                              class="@error('food_restriction') is-invalid @enderror">{{$invitation->food_restriction}}</textarea>
                                     @error('food_restriction')
                                     <div
-                                        class="alert alert-danger">{{ $message }}</div>
+                                        class="alert alert-danger">{{ $message }}
+                                        >
+                                    </div>
                                     @enderror
                                 </div>
                                 <div class="col" style="width: 45%">
                                     <label for="vegan">Mancare vegana:</label>
                                     <select id="vegan"
-                                           name="vegan"
-                                           style="width: 100%"
-                                           value="{{(int) $invitation->vegan}}"
-                                           class="@error('vegan') is-invalid @enderror">
-                                        <option {{(int) $invitation->vegan == 0 ? 'selected' : ''}} value="0">Nu</option>
-                                        <option {{(int) $invitation->vegan == 1 ? 'selected' : ''}} value="1">Da</option>
+                                            name="vegan"
+                                            style="width: 100%"
+                                            value="{{(int) $invitation->vegan}}"
+                                            class="@error('vegan') is-invalid @enderror">
+                                        <option
+                                            {{(int) $invitation->vegan == 0 ? 'selected' : ''}} value="0">
+                                            Nu
+                                        </option>
+                                        <option
+                                            {{(int) $invitation->vegan == 1 ? 'selected' : ''}} value="1">
+                                            Da
+                                        </option>
                                     </select>
                                     @error('vegan')
                                     <div
@@ -330,12 +370,18 @@
                                     <label for="after_party">Vin la
                                         afterparty:</label>
                                     <select id="after_party"
-                                           name="after_party"
-                                           style="width: 100%"
-                                           value="{{(int) $invitation->after_party}}"
-                                           class="@error('after_party') is-invalid @enderror">
-                                        <option {{(int) $invitation->after_party == 0 ? 'selected' : ''}} value="0">Nu</option>
-                                        <option {{(int) $invitation->after_party == 1 ? 'selected' : ''}} value="1">Da</option>
+                                            name="after_party"
+                                            style="width: 100%"
+                                            value="{{(int) $invitation->after_party}}"
+                                            class="@error('after_party') is-invalid @enderror">
+                                        <option
+                                            {{(int) $invitation->after_party == 0 ? 'selected' : ''}} value="0">
+                                            Nu
+                                        </option>
+                                        <option
+                                            {{(int) $invitation->after_party == 1 ? 'selected' : ''}} value="1">
+                                            Da
+                                        </option>
                                     </select>
                                     @error('after_party')
                                     <div
@@ -347,10 +393,10 @@
                                 <div class="col" style="width: 100%">
                                     <label for="after_party">Mesaj:</label>
                                     <textarea id="message"
-                                            rows="3"
-                                            style="width: 100%"
-                                            name="message"
-                                            class="@error('message') is-invalid @enderror">{{$invitation->message}}</textarea>
+                                              rows="3"
+                                              style="width: 100%"
+                                              name="message"
+                                              class="@error('message') is-invalid @enderror">{{$invitation->message}}</textarea>
                                     @error('message')
                                     <div
                                         class="alert alert-danger">{{ $message }}</div>
@@ -359,7 +405,8 @@
                             </div>
                             <div class="row">
                                 <div class="col" style="width: 100%">
-                                    <input type="submit" value="Gata" style="width: 100%"
+                                    <input type="submit" value="Gata"
+                                           style="width: 100%"
                                            class="btn btn--stroke u-fullwidth">
                                 </div>
                             </div>
@@ -441,41 +488,47 @@
                             <div class="col-sm-6 col-md-4">
                                 <a class="lightbox"
                                    href="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366282538_742204614376701_6254522024653727752_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHDw5d4l9RTEqqmlWKKL1qIlQnlehwKW6KVCeV6HApbojZo3NaUJRHoe_e8Ph-1DGI&_nc_ohc=wIrtOo-BI40AX9_hVKA&_nc_ht=scontent.fclj2-1.fna&oh=00_AfAqpmrHe_Yibgfnx64LU8SExDa_J1OpJAUJhTzktigtog&oe=64EDF365">
-                                    <img src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366282538_742204614376701_6254522024653727752_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHDw5d4l9RTEqqmlWKKL1qIlQnlehwKW6KVCeV6HApbojZo3NaUJRHoe_e8Ph-1DGI&_nc_ohc=wIrtOo-BI40AX9_hVKA&_nc_ht=scontent.fclj2-1.fna&oh=00_AfAqpmrHe_Yibgfnx64LU8SExDa_J1OpJAUJhTzktigtog&oe=64EDF365">
+                                    <img
+                                        src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366282538_742204614376701_6254522024653727752_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHDw5d4l9RTEqqmlWKKL1qIlQnlehwKW6KVCeV6HApbojZo3NaUJRHoe_e8Ph-1DGI&_nc_ohc=wIrtOo-BI40AX9_hVKA&_nc_ht=scontent.fclj2-1.fna&oh=00_AfAqpmrHe_Yibgfnx64LU8SExDa_J1OpJAUJhTzktigtog&oe=64EDF365">
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <a class="lightbox"
                                    href="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366329128_742204577710038_1782044825633336156_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHX8zvBf5hMex7nvcZGdDVMMN7bhupdMfcw3tuG6l0x9zmT7qrMfxjSad7QjaKIiYs&_nc_ohc=4hNP_C3Ml4QAX8WqqXn&_nc_ht=scontent.fclj2-1.fna&oh=00_AfAbVtnG_Pdspf92J2VGQz6kGjuunR6WGctKA21HU3WlCA&oe=64ED1ED3">
-                                    <img src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366329128_742204577710038_1782044825633336156_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHX8zvBf5hMex7nvcZGdDVMMN7bhupdMfcw3tuG6l0x9zmT7qrMfxjSad7QjaKIiYs&_nc_ohc=4hNP_C3Ml4QAX8WqqXn&_nc_ht=scontent.fclj2-1.fna&oh=00_AfAbVtnG_Pdspf92J2VGQz6kGjuunR6WGctKA21HU3WlCA&oe=64ED1ED3">
+                                    <img
+                                        src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366329128_742204577710038_1782044825633336156_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHX8zvBf5hMex7nvcZGdDVMMN7bhupdMfcw3tuG6l0x9zmT7qrMfxjSad7QjaKIiYs&_nc_ohc=4hNP_C3Ml4QAX8WqqXn&_nc_ht=scontent.fclj2-1.fna&oh=00_AfAbVtnG_Pdspf92J2VGQz6kGjuunR6WGctKA21HU3WlCA&oe=64ED1ED3">
                                 </a>
                             </div>
                             <div class="col-sm-12 col-md-4">
                                 <a class="lightbox"
                                    href="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366363311_742204474376715_1135498600026357064_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeG23CzFahrszAvgf5Ti0hWZbMGM3aqsdldswYzdqqx2Vx7TXAUU5ylomQ-dlnVNxMc&_nc_ohc=7I_MFMNpUVUAX_BMyNz&_nc_ht=scontent.fclj2-1.fna&oh=00_AfDFVGYaF47DALt63DzMvzx6mV3MpKvGW0fby1h_yhhZXQ&oe=64ED1E4E">
-                                    <img src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366363311_742204474376715_1135498600026357064_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeG23CzFahrszAvgf5Ti0hWZbMGM3aqsdldswYzdqqx2Vx7TXAUU5ylomQ-dlnVNxMc&_nc_ohc=7I_MFMNpUVUAX_BMyNz&_nc_ht=scontent.fclj2-1.fna&oh=00_AfDFVGYaF47DALt63DzMvzx6mV3MpKvGW0fby1h_yhhZXQ&oe=64ED1E4E"
-                                         alt="Tunnel">
+                                    <img
+                                        src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366363311_742204474376715_1135498600026357064_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeG23CzFahrszAvgf5Ti0hWZbMGM3aqsdldswYzdqqx2Vx7TXAUU5ylomQ-dlnVNxMc&_nc_ohc=7I_MFMNpUVUAX_BMyNz&_nc_ht=scontent.fclj2-1.fna&oh=00_AfDFVGYaF47DALt63DzMvzx6mV3MpKvGW0fby1h_yhhZXQ&oe=64ED1E4E"
+                                        alt="Tunnel">
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <a class="lightbox"
                                    href="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366250600_742204427710053_7622125034172988557_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHAwTS3qUkbEr_CNpfEXKcWS_YHwjj_oZ9L9gfCOP-hnwWAmA2uEPyzsOUPwLgpO2g&_nc_ohc=9DNYgq35A_YAX-nkXD8&_nc_ht=scontent.fclj2-1.fna&oh=00_AfDv0qNqKeaVgObgrSBl7nllc5XE7OWBPbPiA7qEFc-VnQ&oe=64ED9B4D">
-                                    <img src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366250600_742204427710053_7622125034172988557_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHAwTS3qUkbEr_CNpfEXKcWS_YHwjj_oZ9L9gfCOP-hnwWAmA2uEPyzsOUPwLgpO2g&_nc_ohc=9DNYgq35A_YAX-nkXD8&_nc_ht=scontent.fclj2-1.fna&oh=00_AfDv0qNqKeaVgObgrSBl7nllc5XE7OWBPbPiA7qEFc-VnQ&oe=64ED9B4D"
-                                         alt="Coast">
+                                    <img
+                                        src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366250600_742204427710053_7622125034172988557_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHAwTS3qUkbEr_CNpfEXKcWS_YHwjj_oZ9L9gfCOP-hnwWAmA2uEPyzsOUPwLgpO2g&_nc_ohc=9DNYgq35A_YAX-nkXD8&_nc_ht=scontent.fclj2-1.fna&oh=00_AfDv0qNqKeaVgObgrSBl7nllc5XE7OWBPbPiA7qEFc-VnQ&oe=64ED9B4D"
+                                        alt="Coast">
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <a class="lightbox"
                                    href="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366300740_742202664376896_7230002102842910849_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGLn8m9XEMyn_SlAhtM1MOeKdnk4i7uJoQp2eTiLu4mhG3ebMekb5IdVkngjlOMRhw&_nc_ohc=jfp_LTekgJoAX8j0xUq&_nc_oc=AQmBWluE_UyoyNp3H8BYWtjDOaEBKdJfzECqwLPN8lJhbTzg3aTMWUZXt2Yk8gJnPBg&_nc_ht=scontent.fclj2-1.fna&oh=00_AfDdy1zHL3OCzlJ1fQ_1KPy_jgoc2MI7W3KnG08ho_ny3A&oe=64EDF9C1">
-                                    <img src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366300740_742202664376896_7230002102842910849_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGLn8m9XEMyn_SlAhtM1MOeKdnk4i7uJoQp2eTiLu4mhG3ebMekb5IdVkngjlOMRhw&_nc_ohc=jfp_LTekgJoAX8j0xUq&_nc_oc=AQmBWluE_UyoyNp3H8BYWtjDOaEBKdJfzECqwLPN8lJhbTzg3aTMWUZXt2Yk8gJnPBg&_nc_ht=scontent.fclj2-1.fna&oh=00_AfDdy1zHL3OCzlJ1fQ_1KPy_jgoc2MI7W3KnG08ho_ny3A&oe=64EDF9C1"
-                                         alt="Rails">
+                                    <img
+                                        src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366300740_742202664376896_7230002102842910849_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGLn8m9XEMyn_SlAhtM1MOeKdnk4i7uJoQp2eTiLu4mhG3ebMekb5IdVkngjlOMRhw&_nc_ohc=jfp_LTekgJoAX8j0xUq&_nc_oc=AQmBWluE_UyoyNp3H8BYWtjDOaEBKdJfzECqwLPN8lJhbTzg3aTMWUZXt2Yk8gJnPBg&_nc_ht=scontent.fclj2-1.fna&oh=00_AfDdy1zHL3OCzlJ1fQ_1KPy_jgoc2MI7W3KnG08ho_ny3A&oe=64EDF9C1"
+                                        alt="Rails">
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <a class="lightbox"
                                    href="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/357774359_737219744875188_990955078902535823_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeHgJeHJ5Wtglj1FiS3Yam0PGCjUJaQV4WoYKNQlpBXhapkIWnDYa59gOz3dukMbV3c&_nc_ohc=XTUHsYcNa8kAX90qagM&_nc_ht=scontent.fclj2-1.fna&oh=00_AfBRRuu-AUOU7QFAXDlQ3ePv5imH2f6u9ZTsf2M5mUftgg&oe=64EC9069">
-                                    <img src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/357774359_737219744875188_990955078902535823_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeHgJeHJ5Wtglj1FiS3Yam0PGCjUJaQV4WoYKNQlpBXhapkIWnDYa59gOz3dukMbV3c&_nc_ohc=XTUHsYcNa8kAX90qagM&_nc_ht=scontent.fclj2-1.fna&oh=00_AfBRRuu-AUOU7QFAXDlQ3ePv5imH2f6u9ZTsf2M5mUftgg&oe=64EC9069"
-                                         alt="Traffic">
+                                    <img
+                                        src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/357774359_737219744875188_990955078902535823_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeHgJeHJ5Wtglj1FiS3Yam0PGCjUJaQV4WoYKNQlpBXhapkIWnDYa59gOz3dukMbV3c&_nc_ohc=XTUHsYcNa8kAX90qagM&_nc_ht=scontent.fclj2-1.fna&oh=00_AfBRRuu-AUOU7QFAXDlQ3ePv5imH2f6u9ZTsf2M5mUftgg&oe=64EC9069"
+                                        alt="Traffic">
                                 </a>
                             </div>
                         </div>

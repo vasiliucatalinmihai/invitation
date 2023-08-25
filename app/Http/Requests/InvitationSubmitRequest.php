@@ -13,7 +13,6 @@ class InvitationSubmitRequest extends FormRequest
     {
         return [
             'hash' => ['required', 'string'],
-            'email' => ['required', 'string'],
             'accepted' => ['boolean'],
             'guests' => ['required', 'integer'],
             'infants' => ['required', 'integer'],
