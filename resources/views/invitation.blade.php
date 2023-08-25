@@ -200,7 +200,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="column">
+                        <div class="col-sm-6 col-md-4">
                             <p class="desc">
                                 <strong>{{$invitation->fullname}}</strong> te
                                 asteptam cu drag, sa chefuiesti alaturi de noi
@@ -212,12 +212,20 @@
 
                         <form method="POST" action="/inv/{{$invitation->hash}}">
 
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4">
+                                    <p class="desc">
+                                        Completarea formularului este obligatorie pana in data de 29.08.2023.
+                                    </p>
+                                </div>
+                            </div>
+
                             @csrf
                             <input type="hidden" name="hash"
                                    value="{{$invitation->hash}}">
                             <div class="row">
                                 <div class="col-sm-6 col-md-4">
-                                    <label for="accepted">Vin:</label>
+                                    <label style="margin-bottom: 0px" for="accepted">Vin:</label>
                                     <select id="accepted" name="accepted" class="@error('accepted') is-invalid @enderror">
                                         <option {{(int) $invitation->accepted == 0 ? 'selected' : ''}} value="0">Nu</option>
                                         <option {{(int) $invitation->accepted == 1 ? 'selected' : ''}} value="1">Da</option>
@@ -228,7 +236,7 @@
                                 </div>
 
                                 <div class="col-sm-6 col-md-4">
-                                    <label for="guests">Persoane:</label>
+                                    <label style="margin-bottom: 0px" for="guests">Persoane:</label>
                                     <select id="guests" name="guests" class="@error('guests') is-invalid @enderror">
                                         <option {{(int) $invitation->guests == 1 ? 'selected' : ''}} value="1">1</option>
                                         <option {{(int) $invitation->guests == 2 ? 'selected' : ''}} value="2">2</option>
@@ -243,7 +251,7 @@
 
                             <div class="row">
                                 <div class="col-sm-6 col-md-4">
-                                    <label for="infants">Copii:</label>
+                                    <label style="margin-bottom: 0px" for="infants">Copii:</label>
                                     <select id="infants" name="infants" class="@error('infants') is-invalid @enderror">
                                         <option {{(int) $invitation->infants == 0 ? 'selected' : ''}} value="0">0</option>
                                         <option {{(int) $invitation->infants == 1 ? 'selected' : ''}} value="1">1</option>
@@ -256,7 +264,7 @@
                                 </div>
 
                                 <div class="col-sm-6 col-md-4">
-                                    <label for="infants_age">Varsta copii:</label>
+                                    <label style="margin-bottom: 0px" for="infants_age">Varsta copii:</label>
                                     <select id="infants_age" name="infants_age"class="@error('infants_age') is-invalid @enderror">
                                         <option {{(int) $invitation->infants_age == 0 ? 'selected' : ''}} value="0">n/a</option>
                                         <option {{(int) $invitation->infants_age == 3 ? 'selected' : ''}} value="3">mai mic de 3 ani</option>
@@ -272,18 +280,21 @@
 
                             <div class="row">
                                 <div class="col-sm-6 col-md-4">
-                                    <label for="food_restriction">Restrictii mancare, alergii:</label>
+                                    <label style="margin-bottom: 0px" for="food_restriction">Restrictii, alergii mancare:</label>
                                     <textarea id="food_restriction" name="food_restriction"
-                                              rows="2" class="@error('food_restriction') is-invalid @enderror">
+                                              rows="1" class="@error('food_restriction') is-invalid @enderror">
                                         {{$invitation->food_restriction}}
                                     </textarea>
                                     @error('food_restriction')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
+                            </div>
 
+
+                            <div class="row">
                                 <div class="col-sm-6 col-md-4">
-                                    <label for="vegan">Mancare vegana:</label>
+                                    <label style="margin-bottom: 0px" for="vegan">Mancare vegana:</label>
                                     <select id="vegan" name="vegan" class="@error('vegan') is-invalid @enderror">
                                         <option {{(int) $invitation->vegan == 0 ? 'selected' : ''}} value="0">Nu</option>
                                         <option {{(int) $invitation->vegan == 1 ? 'selected' : ''}} value="1">Da</option>
@@ -297,7 +308,7 @@
 
                             <div class="row">
                                 <div class="col-sm-6 col-md-4">
-                                    <label for="after_party">Vin la afterparty:</label>
+                                    <label style="margin-bottom: 0px" for="after_party">Vin la afterparty:</label>
                                     <select id="after_party" name="after_party" class="@error('after_party') is-invalid @enderror">
                                         <option {{(int) $invitation->after_party == 0 ? 'selected' : ''}} value="0">Nu</option>
                                         <option {{(int) $invitation->after_party == 1 ? 'selected' : ''}} value="1">Da</option>
@@ -309,7 +320,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-6 col-md-4">
-                                    <label for="after_party">Mesaj:</label>
+                                    <label style="margin-bottom: 0px" for="after_party">Mesaj:</label>
                                     <textarea id="message" rows="3"
                                               name="message" class="@error('message') is-invalid @enderror">
                                         {{$invitation->message}}
@@ -372,7 +383,7 @@
                                     <br>
                                     <iframe
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2732.3025077187754!2d23.7203036767251!3d46.77864324478379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490bf8060c61ff%3A0x49dbbe4e32977ecb!2sLa%20Mosu!5e0!3m2!1sen!2sro!4v1692949664464!5m2!1sen!2sro"
-                                        width="600" height="450"
+                                        width="auto" height="auto"
                                         style="border:0;" allowfullscreen=""
                                         loading="lazy"
                                         referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -397,6 +408,13 @@
                        class="btn btn--stroke u-fullwidth"
                        target="_blank">La Mosu</a>
 
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <p class="desc">
+                                Mosu ne asteapta pe totii cu atmosfera cozy, relaxanta si lipsita de formalitati asa ca tinutele alese tin doar de imaginatia fiecaruia.
+                            </p>
+                        </div>
+                    </div>
                     <div class="tz-gallery">
 
                         <div class="row">

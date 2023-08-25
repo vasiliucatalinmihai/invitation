@@ -3778,6 +3778,7 @@ img.u-pull-left {
     overflow   : hidden;
     position   : absolute;
     top        : 4rem;
+    padding-left: 10px;
 }
 
 .tab-content__item[data-tab-active] {
