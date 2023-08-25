@@ -210,208 +210,123 @@
                     </div>
 
 
-                    <div class="column">
                         <form method="POST" action="/inv/{{$invitation->hash}}">
 
                             @csrf
                             <input type="hidden" name="hash"
                                    value="{{$invitation->hash}}">
                             <div class="row">
-                                <div class="col" style="width: 45%">
+                                <div class="col-sm-6 col-md-4">
                                     <label for="accepted">Vin:</label>
-                                    <select id="accepted" name="accepted"
-                                            style="width: 100%"
-                                            class="@error('accepted') is-invalid @enderror">
-                                        <option
-                                            {{(int) $invitation->accepted == 0 ? 'selected' : ''}} value="0">
-                                            Nu
-                                        </option>
-                                        <option
-                                            {{(int) $invitation->accepted == 1 ? 'selected' : ''}} value="1">
-                                            Da
-                                        </option>
+                                    <select id="accepted" name="accepted" class="@error('accepted') is-invalid @enderror">
+                                        <option {{(int) $invitation->accepted == 0 ? 'selected' : ''}} value="0">Nu</option>
+                                        <option {{(int) $invitation->accepted == 1 ? 'selected' : ''}} value="1">Da</option>
                                     </select>
                                     @error('accepted')
-                                    <div
-                                        class="alert alert-danger">{{ $message }}</div>
+                                        <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
 
-                                <div class="col" style="width: 45%">
+                                <div class="col-sm-6 col-md-4">
                                     <label for="guests">Persoane:</label>
-                                    <select id="guests"
-                                            name="guests"
-                                            value="{{$invitation->guests}}"
-                                            style="width: 100%"
-                                            class="@error('guests') is-invalid @enderror">
-                                        <option
-                                            {{(int) $invitation->guests == 1 ? 'selected' : ''}} value="1">
-                                            1
-                                        </option>
-                                        <option
-                                            {{(int) $invitation->guests == 2 ? 'selected' : ''}} value="2">
-                                            2
-                                        </option>
-                                        <option
-                                            {{(int) $invitation->guests == 3 ? 'selected' : ''}} value="3">
-                                            3
-                                        </option>
+                                    <select id="guests" name="guests" class="@error('guests') is-invalid @enderror">
+                                        <option {{(int) $invitation->guests == 1 ? 'selected' : ''}} value="1">1</option>
+                                        <option {{(int) $invitation->guests == 2 ? 'selected' : ''}} value="2">2</option>
+                                        <option {{(int) $invitation->guests == 3 ? 'selected' : ''}} value="3">3</option>
                                     </select>
                                     @error('guests')
-                                    <div
-                                        class="alert alert-danger">{{ $message }}</div>
+                                        <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
 
 
                             <div class="row">
-                                <div class="col" style="width: 45%">
+                                <div class="col-sm-6 col-md-4">
                                     <label for="infants">Copii:</label>
-                                    <select id="infants"
-                                            name="infants"
-                                            style="width: 100%"
-                                            value="{{$invitation->infants}}"
-                                            class="@error('infants') is-invalid @enderror">
-                                        <option
-                                            {{(int) $invitation->infants == 0 ? 'selected' : ''}} value="0">
-                                            0
-                                        </option>
-                                        <option
-                                            {{(int) $invitation->infants == 1 ? 'selected' : ''}} value="1">
-                                            1
-                                        </option>
-                                        <option
-                                            {{(int) $invitation->infants == 2 ? 'selected' : ''}} value="2">
-                                            2
-                                        </option>
-                                        <option
-                                            {{(int) $invitation->infants == 3 ? 'selected' : ''}} value="3">
-                                            3
-                                        </option>
+                                    <select id="infants" name="infants" class="@error('infants') is-invalid @enderror">
+                                        <option {{(int) $invitation->infants == 0 ? 'selected' : ''}} value="0">0</option>
+                                        <option {{(int) $invitation->infants == 1 ? 'selected' : ''}} value="1">1</option>
+                                        <option {{(int) $invitation->infants == 2 ? 'selected' : ''}} value="2">2</option>
+                                        <option {{(int) $invitation->infants == 3 ? 'selected' : ''}} value="3">3</option>
                                     </select>
                                     @error('infants')
-                                    <div
-                                        class="alert alert-danger">{{ $message }}</div>
+                                        <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
 
-                                <div class="col" style="width: 45%">
-                                    <label for="infants_age">Varsta
-                                        copii:</label>
-                                    <select id="infants_age"
-                                            name="infants_age"
-                                            style="width: 100%"
-                                            value="{{$invitation->infants_age}}"
-                                            class="@error('infants_age') is-invalid @enderror">
-                                        <option
-                                            {{(int) $invitation->infants_age == 0 ? 'selected' : ''}} value="0">
-                                            n/a
-                                        </option>
-                                        <option
-                                            {{(int) $invitation->infants_age == 3 ? 'selected' : ''}} value="3">
-                                            mai mic de 3 ani
-                                        </option>
-                                        <option
-                                            {{(int) $invitation->infants_age == 7 ? 'selected' : ''}} value="7">
-                                            3-7 ani
-                                        </option>
-                                        <option
-                                            {{(int) $invitation->infants_age == 18 ? 'selected' : ''}} value="18">
-                                            mai mare de 7
-                                        </option>
+                                <div class="col-sm-6 col-md-4">
+                                    <label for="infants_age">Varsta copii:</label>
+                                    <select id="infants_age" name="infants_age"class="@error('infants_age') is-invalid @enderror">
+                                        <option {{(int) $invitation->infants_age == 0 ? 'selected' : ''}} value="0">n/a</option>
+                                        <option {{(int) $invitation->infants_age == 3 ? 'selected' : ''}} value="3">mai mic de 3 ani</option>
+                                        <option {{(int) $invitation->infants_age == 7 ? 'selected' : ''}} value="7">3-7 ani</option>
+                                        <option {{(int) $invitation->infants_age == 18 ? 'selected' : ''}} value="18">mai mare de 7</option>
                                     </select>
                                     @error('infants_age')
-                                    <div
-                                        class="alert alert-danger">{{ $message }}</div>
+                                        <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
+
+
                             <div class="row">
-                                <div class="col" style="width: 45%">
-                                    <label for="food_restriction">Restrictii
-                                        mancare, alergii:</label>
-                                    <textarea id="food_restriction"
-                                              name="food_restriction"
-                                              style="width: 100%"
-                                              rows="2"
-                                              class="@error('food_restriction') is-invalid @enderror">{{$invitation->food_restriction}}</textarea>
+                                <div class="col-sm-6 col-md-4">
+                                    <label for="food_restriction">Restrictii mancare, alergii:</label>
+                                    <textarea id="food_restriction" name="food_restriction"
+                                              rows="2" class="@error('food_restriction') is-invalid @enderror">
+                                        {{$invitation->food_restriction}}
+                                    </textarea>
                                     @error('food_restriction')
-                                    <div
-                                        class="alert alert-danger">{{ $message }}
-                                        >
-                                    </div>
+                                        <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                <div class="col" style="width: 45%">
+
+                                <div class="col-sm-6 col-md-4">
                                     <label for="vegan">Mancare vegana:</label>
-                                    <select id="vegan"
-                                            name="vegan"
-                                            style="width: 100%"
-                                            value="{{(int) $invitation->vegan}}"
-                                            class="@error('vegan') is-invalid @enderror">
-                                        <option
-                                            {{(int) $invitation->vegan == 0 ? 'selected' : ''}} value="0">
-                                            Nu
-                                        </option>
-                                        <option
-                                            {{(int) $invitation->vegan == 1 ? 'selected' : ''}} value="1">
-                                            Da
-                                        </option>
+                                    <select id="vegan" name="vegan" class="@error('vegan') is-invalid @enderror">
+                                        <option {{(int) $invitation->vegan == 0 ? 'selected' : ''}} value="0">Nu</option>
+                                        <option {{(int) $invitation->vegan == 1 ? 'selected' : ''}} value="1">Da</option>
                                     </select>
                                     @error('vegan')
-                                    <div
-                                        class="alert alert-danger">{{ $message }}</div>
+                                        <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="row" style="padding-bottom: 30px">
-                                <div class="col" style="width: 100%">
-                                    <label for="after_party">Vin la
-                                        afterparty:</label>
-                                    <select id="after_party"
-                                            name="after_party"
-                                            style="width: 100%"
-                                            value="{{(int) $invitation->after_party}}"
-                                            class="@error('after_party') is-invalid @enderror">
-                                        <option
-                                            {{(int) $invitation->after_party == 0 ? 'selected' : ''}} value="0">
-                                            Nu
-                                        </option>
-                                        <option
-                                            {{(int) $invitation->after_party == 1 ? 'selected' : ''}} value="1">
-                                            Da
-                                        </option>
+
+
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4">
+                                    <label for="after_party">Vin la afterparty:</label>
+                                    <select id="after_party" name="after_party" class="@error('after_party') is-invalid @enderror">
+                                        <option {{(int) $invitation->after_party == 0 ? 'selected' : ''}} value="0">Nu</option>
+                                        <option {{(int) $invitation->after_party == 1 ? 'selected' : ''}} value="1">Da</option>
                                     </select>
                                     @error('after_party')
-                                    <div
-                                        class="alert alert-danger">{{ $message }}</div>
+                                        <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col" style="width: 100%">
+                                <div class="col-sm-6 col-md-4">
                                     <label for="after_party">Mesaj:</label>
-                                    <textarea id="message"
-                                              rows="3"
-                                              style="width: 100%"
-                                              name="message"
-                                              class="@error('message') is-invalid @enderror">{{$invitation->message}}</textarea>
+                                    <textarea id="message" rows="3"
+                                              name="message" class="@error('message') is-invalid @enderror">
+                                        {{$invitation->message}}
+                                    </textarea>
                                     @error('message')
-                                    <div
-                                        class="alert alert-danger">{{ $message }}</div>
+                                        <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                             </div>
+
+
                             <div class="row">
-                                <div class="col" style="width: 100%">
-                                    <input type="submit" value="Gata"
-                                           style="width: 100%"
-                                           class="btn btn--stroke u-fullwidth">
+                                <div class="col-sm-6 col-md-4">
+                                    <input type="submit" value="Gata" class="btn btn--stroke u-fullwidth">
                                 </div>
                             </div>
                         </form>
-                    </div>
 
                     <div
                         class="row block-lg-one-half block-md-one-half block-tab-whole">
