@@ -24,7 +24,7 @@ class Invitations extends Resource
     public static $title = 'email';
 
     public static $search = [
-        'email'
+        'fullname'
     ];
 
     public function fields(Request $request)
@@ -38,8 +38,8 @@ class Invitations extends Resource
 
 
             Textarea::make('message')->default('')->showOnCreating(false),
-            Boolean::make('accepted')->default(false),
-            Number::make('guests')->default(1),
+            Boolean::make('accepted')->default(false)->sortable(true),
+            Number::make('guests')->default(1)->sortable(true),
             Number::make('infants')->default(0)->hideFromIndex(true),
             Select::make('infants_age')
                 ->options([
@@ -51,7 +51,7 @@ class Invitations extends Resource
                 ->default(0)->hideFromIndex(true),
             Boolean::make('vegan')->default(false)->hideFromIndex(true),
             Textarea::make('food_restriction')->showOnCreating(false),
-            Boolean::make('after_party')->default(false),
+            Boolean::make('after_party')->default(false)->sortable(true),
 
         ];
     }
