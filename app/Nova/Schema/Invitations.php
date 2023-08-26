@@ -31,9 +31,8 @@ class Invitations extends Resource
     {
         return [
             ID::make()->sortable()->readonly(),
-            Text::make('email')->nullable(true),
             Text::make('fullname'),
-            Text::make('hash')->readonly()->showOnIndex(false),
+            Text::make('hash')->readonly()->hideFromIndex(true),
             Text::make('link')->displayUsing(fn() => "<a href='" . URL::route('invitation.view', ['hash' => $this->hash]) . "' target='_blank'>" . URL::route('invitation.view', ['hash' => $this->hash]) . "</a>")
                 ->asHtml()->readonly()->hideWhenCreating()->hideWhenUpdating()->hideFromIndex(true),
 
@@ -41,7 +40,7 @@ class Invitations extends Resource
             Textarea::make('message')->default('')->showOnCreating(false),
             Boolean::make('accepted')->default(false),
             Number::make('guests')->default(1),
-            Number::make('infants')->default(0),
+            Number::make('infants')->default(0)->hideFromIndex(true),
             Select::make('infants_age')
                 ->options([
                     "0" => 'n/a',
@@ -49,8 +48,8 @@ class Invitations extends Resource
                     "7" => '3-7 ani',
                     "18"=> 'mai mare de 7'
                 ])
-                ->default(0),
-            Boolean::make('vegan')->default(false),
+                ->default(0)->hideFromIndex(true),
+            Boolean::make('vegan')->default(false)->hideFromIndex(true),
             Textarea::make('food_restriction')->showOnCreating(false),
             Boolean::make('after_party')->default(false),
 

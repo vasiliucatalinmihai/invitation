@@ -3,10 +3,16 @@
 namespace App\Providers;
 
 use App\Models\Invitation;
+use App\Nova\Metrics\Accepted;
+use App\Nova\Metrics\Afterparty;
+use App\Nova\Metrics\Guests;
+use App\Nova\Metrics\Infants;
+use App\Nova\Metrics\Vegan;
 use App\Nova\Observer\InvitationObserver;
 use App\Nova\Schema\Invitations;
 
 use App\User;
+use Illuminate\Support\Facades\App;
 use Laravel\Nova\Nova;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\NovaApplicationServiceProvider;
@@ -55,7 +61,11 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function cards()
     {
         return [
-
+            App::make(Accepted::class)->width('1/2'),
+            App::make(Guests::class)->width('1/2'),
+            App::make(Afterparty::class)->width('1/3'),
+            App::make(Infants::class)->width('1/3'),
+            App::make(Vegan::class)->width('1/3'),
         ];
     }
 
