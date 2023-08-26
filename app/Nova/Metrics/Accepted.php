@@ -5,9 +5,9 @@ namespace App\Nova\Metrics;
 use App\Models\Invitation;
 use Illuminate\Support\Collection;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Laravel\Nova\Metrics\Value;
+use Laravel\Nova\Metrics\Partition;
 
-class Accepted extends Value
+class Accepted extends Partition
 {
     public function name()
     {
@@ -18,7 +18,11 @@ class Accepted extends Value
     {
         /** @var Collection $accepted */
         $accepted = Invitation::where(['accepted' => true]);
-        return $this->result($accepted->count());
+        $rejected = Invitation::where(['accepted' => false]);
+        return $this->result([
+            'Accepted' => $accepted->count(),
+            'Rejected' => $rejected->count(),
+        ]);
     }
 
     public function uriKey()
