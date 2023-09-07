@@ -510,7 +510,11 @@
                                         </svg>
                                             Strada Regele Ferdinand 22, Cluj-Napoca
                                         <br>
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2732.594389039319!2d23.586577976346142!3d46.772890971125506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490e9c34d9b79f%3A0xc0f86796c9e6c54d!2sKlausen%20Burger!5e0!3m2!1sro!2sro!4v1694083631163!5m2!1sro!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2732.594389039319!2d23.586577976346142!3d46.772890971125506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490e9c34d9b79f%3A0xc0f86796c9e6c54d!2sKlausen%20Burger!5e0!3m2!1sro!2sro!4v1694083631163!5m2!1sro!2sro"
+                                                width="auto" height="auto"
+                                                style="border:0;" allowfullscreen=""
+                                                loading="lazy"
+                                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                                         <br>
                                         <br>
                                     </p>
