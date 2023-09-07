@@ -345,7 +345,7 @@
                         <div class="column services-list__item">
                             <div class="services-list__item-content">
                                 <h4 class="item-title">Cand? Unde?</h4>
-                                <p class="desc-bride">
+                                <p class="column">
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                          width="16" height="16"
                                          fill="currentColor"
@@ -471,10 +471,56 @@
                 <!-- end 03 - tab gallery -->
                 <!-- 04 - tab afterparty -->
                 <div id="tab-afterparty" class="tab-content__item">
-                    <p>Undefined for now</p>
-                    <br>
-                    <div class="row">
-
+                    <div
+                        class="row block-lg-one-half block-md-one-half block-tab-whole">
+                        <div class="column services-list__item">
+                            <div class="services-list__item-content">
+                                <p>Klausen Burger </p>
+                                <br>
+                                <div class="row">
+                                    <p class="desc-bride">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             width="16" height="16"
+                                             fill="currentColor"
+                                             class="bi bi-calendar3"
+                                             viewBox="0 0 16 16">
+                                            <path
+                                                d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+                                            <path
+                                                d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                        </svg>
+                                        Sambata, 9 Septembrie
+                                        <br>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             width="16" height="16"
+                                             fill="currentColor" class="bi bi-clock"
+                                             viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                            <path
+                                                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                                        </svg>
+                                        22:00
+                                        <br>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             width="16" height="16"
+                                             fill="currentColor"
+                                             class="bi bi-geo-alt"
+                                             viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                            <path
+                                                d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                        </svg>
+                                            Strada Regele Ferdinand 22, Cluj-Napoca
+                                        <br>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2732.594389039319!2d23.586577976346142!3d46.772890971125506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490e9c34d9b79f%3A0xc0f86796c9e6c54d!2sKlausen%20Burger!5e0!3m2!1sro!2sro!4v1694083631163!5m2!1sro!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <br>
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
