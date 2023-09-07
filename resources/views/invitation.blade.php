@@ -340,8 +340,7 @@
                             </div>
                         </form>
 
-                    <div
-                        class="row block-lg-one-half block-md-one-half block-tab-whole">
+                    <div class="row block-lg-one-half block-md-one-half block-tab-whole">
                         <div class="column services-list__item">
                             <div class="services-list__item-content">
                                 <h4 class="item-title">Cand? Unde?</h4>
@@ -471,14 +470,11 @@
                 <!-- end 03 - tab gallery -->
                 <!-- 04 - tab afterparty -->
                 <div id="tab-afterparty" class="tab-content__item">
-                    <div
-                        class="row block-lg-one-half block-md-one-half block-tab-whole">
+                    <div class="row block-lg-one-half block-md-one-half block-tab-whole">
                         <div class="column services-list__item">
                             <div class="services-list__item-content">
-                                <p>Klausen Burger </p>
-                                <br>
-                                <div class="row">
-                                    <p class="desc-bride">
+                                <h4 class="item-title">Klausen Burger</h4>
+                                <p class="column">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                              width="16" height="16"
                                              fill="currentColor"
@@ -518,7 +514,6 @@
                                         <br>
                                         <br>
                                     </p>
-                                </div>
                             </div>
                         </div>
                     </div>
