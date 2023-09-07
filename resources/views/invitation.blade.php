@@ -420,44 +420,44 @@
                         <div class="row">
                             <div class="col-sm-6 col-md-4">
                                 <a class="lightbox"
-                                   href="url('/assets/img/la-mosu/1.jpeg')">
+                                   href="{{asset('/assets/img/la-mosu/1.jpeg')}}">
                                     <img
-                                        src="url('/assets/img/la-mosu/1.jpeg')">
+                                        src="{{asset('/assets/img/la-mosu/1.jpeg')}}">
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <a class="lightbox"
-                                   href="url('/assets/img/la-mosu/2.jpeg')">
+                                   href="{{asset('/assets/img/la-mosu/2.jpeg')}}">
                                     <img
-                                        src="url('/assets/img/la-mosu/2.jpeg')">
+                                        src="{{asset('/assets/img/la-mosu/2.jpeg')}}">
                                 </a>
                             </div>
                             <div class="col-sm-12 col-md-4">
                                 <a class="lightbox"
-                                   href="url('/assets/img/la-mosu/3.jpeg')">
+                                   href="{{asset('/assets/img/la-mosu/3.jpeg')}}">
                                     <img
-                                        src="url('/assets/img/la-mosu/3.jpeg')">
+                                        src="{{asset('/assets/img/la-mosu/3.jpeg')}}">
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <a class="lightbox"
-                                   href="url('/assets/img/la-mosu/4.jpeg')">
+                                   href="{{asset('/assets/img/la-mosu/4.jpeg')}}">
                                     <img
-                                        src="url('/assets/img/la-mosu/4.jpeg')">
+                                        src="{{asset('/assets/img/la-mosu/4.jpeg')}}">
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <a class="lightbox"
-                                   href="url('/assets/img/la-mosu/5.jpeg')">
+                                   href="{{asset('/assets/img/la-mosu/5.jpeg')}}">
                                     <img
-                                        src="url('/assets/img/la-mosu/5.jpeg')">
+                                        src="{{asset('/assets/img/la-mosu/5.jpeg')}}">
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <a class="lightbox"
-                                   href="url('/assets/img/la-mosu/6.jpeg')">
+                                   href="{{asset('/assets/img/la-mosu/6.jpeg')}}">
                                     <img
-                                        src="url('/assets/img/la-mosu/6.jpeg')">
+                                        src="{{asset('/assets/img/la-mosu/6.jpeg')}}">
                                 </a>
                             </div>
                         </div>
