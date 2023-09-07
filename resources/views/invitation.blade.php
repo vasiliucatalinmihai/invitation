@@ -420,54 +420,51 @@
                         <div class="row">
                             <div class="col-sm-6 col-md-4">
                                 <a class="lightbox"
-                                   href="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366282538_742204614376701_6254522024653727752_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHDw5d4l9RTEqqmlWKKL1qIlQnlehwKW6KVCeV6HApbojZo3NaUJRHoe_e8Ph-1DGI&_nc_ohc=wIrtOo-BI40AX9_hVKA&_nc_ht=scontent.fclj2-1.fna&oh=00_AfAqpmrHe_Yibgfnx64LU8SExDa_J1OpJAUJhTzktigtog&oe=64EDF365">
+                                   href="url('/assets/img/la-mosu/1.jpeg')">
                                     <img
-                                        src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366282538_742204614376701_6254522024653727752_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHDw5d4l9RTEqqmlWKKL1qIlQnlehwKW6KVCeV6HApbojZo3NaUJRHoe_e8Ph-1DGI&_nc_ohc=wIrtOo-BI40AX9_hVKA&_nc_ht=scontent.fclj2-1.fna&oh=00_AfAqpmrHe_Yibgfnx64LU8SExDa_J1OpJAUJhTzktigtog&oe=64EDF365">
+                                        src="url('/assets/img/la-mosu/1.jpeg')">
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <a class="lightbox"
-                                   href="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366329128_742204577710038_1782044825633336156_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHX8zvBf5hMex7nvcZGdDVMMN7bhupdMfcw3tuG6l0x9zmT7qrMfxjSad7QjaKIiYs&_nc_ohc=4hNP_C3Ml4QAX8WqqXn&_nc_ht=scontent.fclj2-1.fna&oh=00_AfAbVtnG_Pdspf92J2VGQz6kGjuunR6WGctKA21HU3WlCA&oe=64ED1ED3">
+                                   href="url('/assets/img/la-mosu/2.jpeg')">
                                     <img
-                                        src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366329128_742204577710038_1782044825633336156_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHX8zvBf5hMex7nvcZGdDVMMN7bhupdMfcw3tuG6l0x9zmT7qrMfxjSad7QjaKIiYs&_nc_ohc=4hNP_C3Ml4QAX8WqqXn&_nc_ht=scontent.fclj2-1.fna&oh=00_AfAbVtnG_Pdspf92J2VGQz6kGjuunR6WGctKA21HU3WlCA&oe=64ED1ED3">
+                                        src="url('/assets/img/la-mosu/2.jpeg')">
                                 </a>
                             </div>
                             <div class="col-sm-12 col-md-4">
                                 <a class="lightbox"
-                                   href="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366363311_742204474376715_1135498600026357064_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeG23CzFahrszAvgf5Ti0hWZbMGM3aqsdldswYzdqqx2Vx7TXAUU5ylomQ-dlnVNxMc&_nc_ohc=7I_MFMNpUVUAX_BMyNz&_nc_ht=scontent.fclj2-1.fna&oh=00_AfDFVGYaF47DALt63DzMvzx6mV3MpKvGW0fby1h_yhhZXQ&oe=64ED1E4E">
+                                   href="url('/assets/img/la-mosu/3.jpeg')">
                                     <img
-                                        src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366363311_742204474376715_1135498600026357064_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeG23CzFahrszAvgf5Ti0hWZbMGM3aqsdldswYzdqqx2Vx7TXAUU5ylomQ-dlnVNxMc&_nc_ohc=7I_MFMNpUVUAX_BMyNz&_nc_ht=scontent.fclj2-1.fna&oh=00_AfDFVGYaF47DALt63DzMvzx6mV3MpKvGW0fby1h_yhhZXQ&oe=64ED1E4E"
-                                        alt="Tunnel">
+                                        src="url('/assets/img/la-mosu/3.jpeg')">
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <a class="lightbox"
-                                   href="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366250600_742204427710053_7622125034172988557_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHAwTS3qUkbEr_CNpfEXKcWS_YHwjj_oZ9L9gfCOP-hnwWAmA2uEPyzsOUPwLgpO2g&_nc_ohc=9DNYgq35A_YAX-nkXD8&_nc_ht=scontent.fclj2-1.fna&oh=00_AfDv0qNqKeaVgObgrSBl7nllc5XE7OWBPbPiA7qEFc-VnQ&oe=64ED9B4D">
+                                   href="url('/assets/img/la-mosu/4.jpeg')">
                                     <img
-                                        src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366250600_742204427710053_7622125034172988557_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHAwTS3qUkbEr_CNpfEXKcWS_YHwjj_oZ9L9gfCOP-hnwWAmA2uEPyzsOUPwLgpO2g&_nc_ohc=9DNYgq35A_YAX-nkXD8&_nc_ht=scontent.fclj2-1.fna&oh=00_AfDv0qNqKeaVgObgrSBl7nllc5XE7OWBPbPiA7qEFc-VnQ&oe=64ED9B4D"
-                                        alt="Coast">
+                                        src="url('/assets/img/la-mosu/4.jpeg')">
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <a class="lightbox"
-                                   href="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366300740_742202664376896_7230002102842910849_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGLn8m9XEMyn_SlAhtM1MOeKdnk4i7uJoQp2eTiLu4mhG3ebMekb5IdVkngjlOMRhw&_nc_ohc=jfp_LTekgJoAX8j0xUq&_nc_oc=AQmBWluE_UyoyNp3H8BYWtjDOaEBKdJfzECqwLPN8lJhbTzg3aTMWUZXt2Yk8gJnPBg&_nc_ht=scontent.fclj2-1.fna&oh=00_AfDdy1zHL3OCzlJ1fQ_1KPy_jgoc2MI7W3KnG08ho_ny3A&oe=64EDF9C1">
+                                   href="url('/assets/img/la-mosu/5.jpeg')">
                                     <img
-                                        src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/366300740_742202664376896_7230002102842910849_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGLn8m9XEMyn_SlAhtM1MOeKdnk4i7uJoQp2eTiLu4mhG3ebMekb5IdVkngjlOMRhw&_nc_ohc=jfp_LTekgJoAX8j0xUq&_nc_oc=AQmBWluE_UyoyNp3H8BYWtjDOaEBKdJfzECqwLPN8lJhbTzg3aTMWUZXt2Yk8gJnPBg&_nc_ht=scontent.fclj2-1.fna&oh=00_AfDdy1zHL3OCzlJ1fQ_1KPy_jgoc2MI7W3KnG08ho_ny3A&oe=64EDF9C1"
-                                        alt="Rails">
+                                        src="url('/assets/img/la-mosu/5.jpeg')">
                                 </a>
                             </div>
                             <div class="col-sm-6 col-md-4">
                                 <a class="lightbox"
-                                   href="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/357774359_737219744875188_990955078902535823_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeHgJeHJ5Wtglj1FiS3Yam0PGCjUJaQV4WoYKNQlpBXhapkIWnDYa59gOz3dukMbV3c&_nc_ohc=XTUHsYcNa8kAX90qagM&_nc_ht=scontent.fclj2-1.fna&oh=00_AfBRRuu-AUOU7QFAXDlQ3ePv5imH2f6u9ZTsf2M5mUftgg&oe=64EC9069">
+                                   href="url('/assets/img/la-mosu/6.jpeg')">
                                     <img
-                                        src="https://scontent.fclj2-1.fna.fbcdn.net/v/t39.30808-6/357774359_737219744875188_990955078902535823_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeHgJeHJ5Wtglj1FiS3Yam0PGCjUJaQV4WoYKNQlpBXhapkIWnDYa59gOz3dukMbV3c&_nc_ohc=XTUHsYcNa8kAX90qagM&_nc_ht=scontent.fclj2-1.fna&oh=00_AfBRRuu-AUOU7QFAXDlQ3ePv5imH2f6u9ZTsf2M5mUftgg&oe=64EC9069"
-                                        alt="Traffic">
+                                        src="url('/assets/img/la-mosu/6.jpeg')">
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- end 03 - tab gallery -->
+
                 <!-- 04 - tab afterparty -->
                 <div id="tab-afterparty" class="tab-content__item">
                     <div class="row block-lg-one-half block-md-one-half block-tab-whole">
